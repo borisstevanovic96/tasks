@@ -14,7 +14,7 @@ export const UpdateTaskForm = ({
   
     const handleUpdateTaskName = async () => {
       try {
-        await axios.put(API_URL, {
+        await axios.put(`${API_URL}/task`, {
           id,
           name: taskName,
           completed,
