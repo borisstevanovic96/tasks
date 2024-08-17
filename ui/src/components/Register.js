@@ -37,11 +37,7 @@ function Register() {
     } else if (formData.password.length < 6) {
       formErrors.password = 'Password must be at least 6 characters';
     }
-    if (!formData.confirmPassword) {
-      formErrors.confirmPassword = 'Please confirm your password';
-    } else if (formData.password !== formData.confirmPassword) {
-      formErrors.confirmPassword = 'Passwords do not match';
-    }
+    
 
     return formErrors;
   };
