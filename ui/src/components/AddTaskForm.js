@@ -9,7 +9,7 @@ const AddTaskForm = ({fetchTasks}) => {
 
   const addNewTask = async () => {
     try {
-      await axios.post(API_URL, {
+      await axios.post(`${API_URL}/task`, {
         name: newTask,
         completed: false,
       });
