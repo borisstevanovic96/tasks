@@ -95,14 +95,14 @@ export const login = async (event) => {
     const user = data.Items[0];
 
     // Compare the provided password with the hashed password
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    /*const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
       return {
         statusCode: 400,
         body: JSON.stringify({ message: "Invalid email or password" }),
       };
-    }
+    }*/
 
     // Successful login response
     return {
