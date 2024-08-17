@@ -50,7 +50,7 @@ function Register() {
       setServerError('');
 
       try {
-        console.log('boko');
+        console.log('Form Data:', formData);
         const response = await axios.post(`${API_URL}/register`, formData);
 
         if (!response.ok) {
