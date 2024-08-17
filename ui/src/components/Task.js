@@ -15,7 +15,7 @@ const Task = ({ task, fetchTasks }) => {
 
   const handleUpdateTaskCompletion = async () => {
     try {
-      await axios.put(API_URL, {
+      await axios.put(`${API_URL}/task`, {
         id,
         name,
         completed: !isComplete,
