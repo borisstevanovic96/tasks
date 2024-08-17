@@ -8,7 +8,7 @@ const docClient = DynamoDBDocumentClient.from(client);
 
 export const createUser = async (event) => {
   try {
-    const { username, email, password } = JSON.parse(event.body);
+    const { username, email, password } = event.body;
     console.log("Received Data:", { username, email, password });
     // Basic validation
     if (!username || !email || !password) {
