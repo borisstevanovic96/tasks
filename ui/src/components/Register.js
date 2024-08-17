@@ -54,6 +54,7 @@ function Register() {
       setServerError('');
 
       try {
+        console.log('boko');
         const response = await axios.post(`${API_URL}/register`, formData);
 
         if (!response.ok) {
@@ -71,6 +72,7 @@ function Register() {
       }
     } else {
       setErrors(formErrors);
+      console.log('register errors');
     }
   };
 
