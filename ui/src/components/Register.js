@@ -53,16 +53,20 @@ function Register() {
         console.log('Form Data:', formData);
         const response = await axios.post(`${API_URL}/register`, formData);
 
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.message || 'Registration failed');
-        }
+        if (response.status !== 201) {
+  throw new Error(response.data.message || 'Registration failed');
+}
 
         setSubmitted(true);
         console.log('Registration successful', await response.json());
         window.location.replace("/login");
       } catch (error) {
-        setServerError(error.message);
+        if (error.response && error.response.data && error.response.data.message) {
+    setServerError(error.response.data.message);
+  } else {
+    setServerError(error.message);
+  }
+  setLoading(false);
       } finally {
         setLoading(false);
       }
