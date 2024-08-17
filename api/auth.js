@@ -11,12 +11,12 @@ export const createUser = async (event) => {
     const { username, email, password } = event.body;
     console.log("Received Data:", { username, email, password });
     // Basic validation
-    if (!username || !email || !password) {
+   /* if (!username || !email || !password) {
       return {
         statusCode: 400,
         body: JSON.stringify({ message: "Username, email, and password are required" }),
       };
-    }
+    }*/
 
     // Hash the password before storing it
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -36,9 +36,9 @@ export const createUser = async (event) => {
       ConditionExpression: "attribute_not_exists(email)", // Ensures the email is unique
     };
 
-    await docClient.send(new PutCommand(params));
-
-    return {
+    const response = await docClient.send(new PutCommand(params));
+    return response;
+    /*return {
       statusCode: 201,
       body: JSON.stringify({ message: "User registered successfully" }),
     };
@@ -56,7 +56,7 @@ export const createUser = async (event) => {
       statusCode: 500,
       body: JSON.stringify({ message: "Internal Server Error" }),
     };
-  }
+  }*/
 };
 
 
