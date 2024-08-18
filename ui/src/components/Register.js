@@ -58,7 +58,7 @@ function Register() {
 }
 
         setSubmitted(true);
-        console.log('Registration successful', await response.json());
+        
         window.location.replace("/login");
       } catch (error) {
         if (error.response && error.response.data && error.response.data.message) {
