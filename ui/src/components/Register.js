@@ -91,6 +91,7 @@ function Register() {
               name="username"
               value={formData.username}
               onChange={handleChange}
+              autocomplete="username"
               className={errors.username ? 'error' : ''}
             />
             {errors.username && <span className="error-text">{errors.username}</span>}
@@ -104,6 +105,7 @@ function Register() {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              autocomplete="email" 
               className={errors.email ? 'error' : ''}
             />
             {errors.email && <span className="error-text">{errors.email}</span>}
@@ -117,6 +119,7 @@ function Register() {
               name="password"
               value={formData.password}
               onChange={handleChange}
+              autocomplete="new-password" 
               className={errors.password ? 'error' : ''}
             />
             {errors.password && <span className="error-text">{errors.password}</span>}
