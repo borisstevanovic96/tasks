@@ -1,0 +1,78 @@
+/* Login.css */
+
+.login-container {
+  background-color: #111; /* Black background */
+  color: #fff; /* White text */
+  padding: 3rem; /* Equal padding on all sides */
+  max-width: 500px; /* Consistent width with the register form */
+  margin: 3rem auto; /* Center the form */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #444; /* Subtle border */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem; /* Space below the title */
+  font-size: 1.75rem; /* Slightly larger font size */
+  color: #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Space between form groups */
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ddd;
+}
+
+input {
+  width: calc(100% - 2rem); /* Ensures equal padding inside the container */
+  padding: 0.75rem;
+  margin: 0 auto; /* Centers the input horizontally */
+  border-radius: 5px;
+  border: 1px solid #555; /* Border for inputs */
+  background-color: #222; /* Dark background for inputs */
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+}
+
+.error {
+  border-color: #dc3545; /* Red border on error */
+}
+
+.error-message {
+  color: #dc3545; /* Red text for error messages */
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.submit-button {
+  width: calc(100% - 2rem); /* Adjusted to match the input width */
+  padding: 0.75rem;
+  margin: 0 auto; /* Centers the button horizontally */
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff; /* Blue button background */
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #555; /* Gray background when disabled */
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker blue on hover */
+}
