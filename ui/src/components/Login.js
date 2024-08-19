@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../utils';
-
+import '../login.css'
  // Replace with your actual backend URL
 
 function Login() {
