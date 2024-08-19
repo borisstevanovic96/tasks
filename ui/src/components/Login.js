@@ -39,9 +39,8 @@ function Login() {
       if (response.data.statusCode === 200) {
        console.log('tacna sifra');
         navigate("/");
-      } else {
-       console.log('netacna sifra');
-        setError('Login failed. Please try again.');
+      } else if(response.data.statusCode === 400) {
+        setError('Neuspjesno prijavljivanje. Netacan email ili sifra');
       }
     } catch (err) {
       console.error('Login error:', err);
