@@ -68,9 +68,10 @@ input:focus {
 }
 
 .submit-button {
-  width: calc(100% - 2rem); /* Adjusted to match the input width */
+  width: 50%; /* Make the button width 50% of the container */
   padding: 0.75rem;
-  margin: 0 auto; /* Centers the button horizontally */
+  margin: 1rem auto 0 auto; /* Center the button and add spacing */
+  display: block; /* Ensure the button is treated as a block element */
   border-radius: 5px;
   border: none;
   background-color: #007bff; /* Blue button background */
@@ -78,7 +79,9 @@ input:focus {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-align: center; /* Center the text inside the button */
 }
+
 
 .submit-button:disabled {
   background-color: #555; /* Gray background when disabled */
