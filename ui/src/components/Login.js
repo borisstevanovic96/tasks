@@ -36,9 +36,9 @@ function Login() {
         },
       });
      console.log(response);
-      if (response.status === 200) {
+      if (response.data.statusCode === 200) {
        console.log('tacna sifra');
-        //window.location.replace("/");
+        window.location.replace("/");
       } else {
        console.log('netacna sifra');
         setError('Login failed. Please try again.');
