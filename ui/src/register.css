@@ -1,0 +1,88 @@
+/* Register.css */
+
+.register-container {
+  background-color: #111; /* Black background */
+  color: #fff; /* White text */
+  padding: 2rem; /* Spacing around the form */
+  max-width: 400px;
+  margin: 3rem auto; /* Center the form */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #444; /* Subtle border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ddd;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #555; /* Border for inputs */
+  background-color: #222; /* Dark background for inputs */
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+}
+
+.error {
+  border-color: #dc3545; /* Red border on error */
+}
+
+.error-text {
+  color: #dc3545; /* Red text for error messages */
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.server-error {
+  color: #dc3545; /* Red text for server errors */
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.success-message {
+  color: #28a745; /* Green text for success message */
+  text-align: center;
+  font-weight: bold;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff; /* Blue button background */
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #555; /* Gray background when disabled */
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker blue on hover */
+}
