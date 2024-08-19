@@ -20,7 +20,7 @@ export default function Home() {
   const navigate = useNavigate();
   const fetchTasks = async () => {
     try {
-      const { data } = await axios.get(${API_URL}/task);
+      const { data } = await axios.get(`${API_URL}/task`);
 
       setTasks(data);
     } catch (err) {
