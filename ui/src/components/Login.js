@@ -35,11 +35,12 @@ function Login() {
           'Content-Type': 'application/json',
         },
       });
-
+     console.log(response);
       if (response.status === 200) {
        console.log('tacna sifra');
-        window.location.replace("/");
+        //window.location.replace("/");
       } else {
+       console.log('netacna sifra');
         setError('Login failed. Please try again.');
       }
     } catch (err) {
