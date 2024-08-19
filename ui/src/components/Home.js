@@ -41,18 +41,25 @@ export default function Home() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Button 
-        variant="contained" 
-        color="secondary" 
-        onClick={handleLogout}
-        style={{ marginBottom: '1rem', float: 'right' }} // Adjust the button's position
-      >
-        Logout
-      </Button>
-      <AddTaskForm fetchTasks={fetchTasks} />
-      {tasks.map((task) => (
-        <Task task={task} key={task.id} fetchTasks={fetchTasks} />
-      ))}
+      <div style={{ position: 'relative', height: '100vh' }}>
+        {/* Add the Logout Button */}
+        <Button 
+          variant="contained" 
+          color="secondary" 
+          onClick={handleLogout}
+          style={{
+            position: 'absolute',
+            top: '20px',
+            right: '20px',
+          }}
+        >
+          Logout
+        </Button>
+        <AddTaskForm fetchTasks={fetchTasks} />
+        {tasks.map((task) => (
+          <Task task={task} key={task.id} fetchTasks={fetchTasks} />
+        ))}
+      </div>
     </ThemeProvider>
   );
 }
