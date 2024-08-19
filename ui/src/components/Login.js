@@ -36,7 +36,11 @@ function Login() {
         },
       });
 
-      window.location.replace("/");
+      if (response.status === 200) {
+        window.location.replace("/");
+      } else {
+        setError('Login failed. Please try again.');
+      }
     } catch (err) {
       console.error('Login error:', err);
       setError(err.response?.data?.message || 'An error occurred during login');
