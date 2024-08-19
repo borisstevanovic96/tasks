@@ -69,7 +69,7 @@ export default function Home() {
     if (!comment) return;
 
     try {
-      await axios.post(`${API_URL}/task/${selectedTaskId}/comment`, { comment });
+      await axios.post(`${API_URL}/task/${selectedTaskId}/comment`, { selectedTaskId, comment });
       setComment('');
       setOpen(false);
       fetchTasks(); // Refresh tasks to show the new comment
