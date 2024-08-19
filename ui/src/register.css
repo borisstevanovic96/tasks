@@ -3,23 +3,23 @@
 .register-container {
   background-color: #111; /* Black background */
   color: #fff; /* White text */
-  padding: 2rem; /* Spacing around the form */
-  max-width: 400px;
+  padding: 3rem; /* Increased spacing around the form */
+  max-width: 500px; /* Made the form wider */
   margin: 3rem auto; /* Center the form */
   border-radius: 10px; /* Rounded corners */
   border: 1px solid #444; /* Subtle border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Slightly larger shadow */
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  margin-bottom: 2rem; /* Adjusted spacing under the title */
+  font-size: 1.75rem; /* Slightly larger font size */
   color: #f0f0f0;
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Increased spacing between form groups */
 }
 
 label {
@@ -30,8 +30,9 @@ label {
 }
 
 input {
-  width: 100%;
+  width: calc(100% - 2rem); /* Ensures equal padding inside the container */
   padding: 0.75rem;
+  margin: 0 auto; /* Centers the input horizontally */
   border-radius: 5px;
   border: 1px solid #555; /* Border for inputs */
   background-color: #222; /* Dark background for inputs */
@@ -67,8 +68,9 @@ input:focus {
 }
 
 .submit-button {
-  width: 100%;
+  width: calc(100% - 2rem); /* Adjusted to match the input width */
   padding: 0.75rem;
+  margin: 0 auto; /* Centers the button horizontally */
   border-radius: 5px;
   border: none;
   background-color: #007bff; /* Blue button background */
