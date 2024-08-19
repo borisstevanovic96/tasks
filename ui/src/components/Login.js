@@ -52,7 +52,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2>Uloguj se</h2>
       <form onSubmit={handleSubmit} noValidate>
         <div className="form-group">
           <label htmlFor="email">Email</label>
@@ -68,7 +68,7 @@ function Login() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Sifra</label>
           <input
             type="password"
             id="password"
@@ -83,7 +83,7 @@ function Login() {
         {error && <div className="error-message">{error}</div>}
 
         <button type="submit" className="submit-button" disabled={loading}>
-          {loading ? 'Logging in...' : 'Login'}
+          {loading ? 'Loguje se' : 'Uloguj se'}
         </button>
       </form>
     </div>
