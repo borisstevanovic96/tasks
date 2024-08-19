@@ -80,7 +80,7 @@ function Register() {
 
   return (
     <div className="register-container">
-      <h2>Register</h2>
+      <h2>Registruj se</h2>
       {submitted ? (
         <div className="success-message">Registration successful!</div>
       ) : (
@@ -130,7 +130,7 @@ function Register() {
           {serverError && <div className="server-error">{serverError}</div>}
 
           <button type="submit" className="submit-button" disabled={loading}>
-            {loading ? 'Registering...' : 'Register'}
+            {loading ? 'Prijavljuje se...' : 'Prijavi se'}
           </button>
         </form>
       )}
