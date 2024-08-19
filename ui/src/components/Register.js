@@ -55,7 +55,7 @@ function Register() {
         console.log('Form Data:', formData);
         const response = await axios.post(`${API_URL}/register`, formData);
         console.log(response);
-        if (response.status !== 200) {
+        if (response.data.statusCode !== 200) {
   throw new Error(response.data.message || 'Registration failed');
 }
 
