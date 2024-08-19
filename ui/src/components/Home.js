@@ -41,16 +41,17 @@ export default function Home() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <div style={{ position: 'relative', height: '100vh' }}>
+      <div style={{ position: 'relative', minHeight: '100vh' }}>
         {/* Add the Logout Button */}
         <Button 
           variant="contained" 
           color="secondary" 
           onClick={handleLogout}
           style={{
-            position: 'absolute',
+            position: 'fixed',
             top: '20px',
             right: '20px',
+            zIndex: 1000, // Ensures the button is on top
           }}
         >
           Logout
