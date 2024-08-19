@@ -37,6 +37,7 @@ function Login() {
       });
 
       if (response.status === 200) {
+       console.log('tacna sifra');
         window.location.replace("/");
       } else {
         setError('Login failed. Please try again.');
