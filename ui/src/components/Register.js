@@ -27,17 +27,17 @@ function Register() {
   const validateForm = () => {
     let formErrors = {};
     if (!formData.username) {
-      formErrors.username = 'Username is required';
+      formErrors.username = 'Korisnicko ime je neophodno';
     }
     if (!formData.email) {
-      formErrors.email = 'Email is required';
+      formErrors.email = 'Email je neophodan';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = 'Email is invalid';
+      formErrors.email = 'Email je neispravan';
     }
     if (!formData.password) {
-      formErrors.password = 'Password is required';
+      formErrors.password = 'Sifra je neophodna';
     } else if (formData.password.length < 6) {
-      formErrors.password = 'Password must be at least 6 characters';
+      formErrors.password = 'Sifra mora biti bar 6 karaktera duga';
     }
     
 
@@ -56,7 +56,7 @@ function Register() {
         const response = await axios.post(`${API_URL}/register`, formData);
         console.log(response);
         if (response.data.statusCode !== 200) {
-  throw new Error(response.data.message || 'Registration failed');
+  throw new Error(response.data.message || 'Korisnik sa tim emailom vec postoji');
 }
 
         setSubmitted(true);
@@ -86,7 +86,7 @@ function Register() {
       ) : (
         <form onSubmit={handleSubmit} noValidate>
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">Korisnicko ime</label>
             <input
               type="text"
               id="username"
@@ -114,7 +114,7 @@ function Register() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Sifra</label>
             <input
               type="password"
               id="password"
