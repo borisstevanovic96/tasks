@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios"
 import { API_URL } from '../utils'; 
 import '../register.css'; // Import the CSS file
+import { useNavigate } from 'react-router-dom';
 function Register() {
   const [formData, setFormData] = useState({
     username: '',
@@ -13,6 +14,7 @@ function Register() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [serverError, setServerError] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,14 +54,14 @@ function Register() {
       try {
         console.log('Form Data:', formData);
         const response = await axios.post(`${API_URL}/register`, formData);
-
+        console.log(response);
         if (response.status !== 200) {
   throw new Error(response.data.message || 'Registration failed');
 }
 
         setSubmitted(true);
         
-        window.location.replace("/login");
+        navigate("/login");
       } catch (error) {
         if (error.response && error.response.data && error.response.data.message) {
     setServerError(error.response.data.message);
