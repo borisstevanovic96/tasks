@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios"
 import { API_URL } from '../utils'; 
-
+import '../register.css'; // Import the CSS file
 function Register() {
   const [formData, setFormData] = useState({
     username: '',
