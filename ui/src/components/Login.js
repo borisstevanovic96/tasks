@@ -38,7 +38,7 @@ function Login() {
      console.log(response);
       if (response.data.statusCode === 200) {
        console.log('tacna sifra');
-        window.location.replace("/");
+        navigate("/");
       } else {
        console.log('netacna sifra');
         setError('Login failed. Please try again.');
