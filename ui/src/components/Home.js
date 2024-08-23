@@ -19,14 +19,18 @@ export default function Home() {
   const navigate = useNavigate();
   const { userId } = useParams();
   const fetchTasks = async () => {
-    try {
-      const { data } = await axios.get(`${API_URL}/task`);
+  try {
+    const { data } = await axios.get(`${API_URL}/task`, {
+      params: {
+        userId: userId,
+      },
+    });
+    setTasks(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
-      setTasks(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   useEffect(() => {
     fetchTasks();
