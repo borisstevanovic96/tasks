@@ -44,7 +44,12 @@ function Login() {
       // Extract the userId
       const userId = parsedBody.user.id;
        console.log(userId)
-       navigate(`/${userId}`); 
+       // Store userId in local storage or context
+      localStorage.setItem('userId', userId);
+
+  // Redirect to home
+  navigate('/');
+       
 
 
       } else if(response.data.statusCode === 400) {
