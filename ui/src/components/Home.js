@@ -18,6 +18,7 @@ export default function Home() {
   const [tasks, setTasks] = useState([]);
   const navigate = useNavigate();
   const { userId } = useParams();
+  console.log(userId);
   const fetchTasks = async () => {
   try {
     const { data } = await axios.get(`${API_URL}/task`, {
