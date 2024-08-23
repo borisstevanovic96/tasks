@@ -7,8 +7,7 @@ import axios from "axios";
 import { API_URL } from "../utils";
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-
-
+import { useParams } from "react-router-dom";
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -18,6 +17,7 @@ const darkTheme = createTheme({
 export default function Home() {
   const [tasks, setTasks] = useState([]);
   const navigate = useNavigate();
+  const { userId } = useParams();
   const fetchTasks = async () => {
     try {
       const { data } = await axios.get(`${API_URL}/task`);
