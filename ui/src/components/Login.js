@@ -44,7 +44,7 @@ function Login() {
       // Extract the userId
       const userId = parsedBody.user.id;
        console.log(userId)
-       navigate(`/tasks/${userId}`); 
+       navigate(`/${userId}`); 
 
 
       } else if(response.data.statusCode === 400) {
