@@ -39,7 +39,9 @@ function Login() {
      console.log(response);
       if (response.data.statusCode === 200) {
        console.log('tacna sifra');
-       navigate(`/${userId}`);
+       const userId = response.data.userId; // Extract userId from the response
+       console.log(userId)
+        navigate(`/tasks/${userId}`); 
 
 
       } else if(response.data.statusCode === 400) {
