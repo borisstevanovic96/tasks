@@ -18,7 +18,7 @@ export default function Home() {
   const [tasks, setTasks] = useState([]);
   const navigate = useNavigate();
   const fetchTasks = async () => {
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('userId')?.trim();
     console.log(userId);
   try {
     const { data } = await axios.get(`${API_URL}/task/${userId}`);
