@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../utils';
 import '../login.css'
+
  // Replace with your actual backend URL
 
 function Login() {
@@ -38,7 +39,9 @@ function Login() {
      console.log(response);
       if (response.data.statusCode === 200) {
        console.log('tacna sifra');
-        navigate("/");
+       navigate(`/tasks/${userId}`);
+
+
       } else if(response.data.statusCode === 400) {
         setError('Neuspjesno prijavljivanje. Netacan email ili sifra');
       }
