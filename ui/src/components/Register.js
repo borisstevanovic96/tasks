@@ -134,6 +134,9 @@ function Register() {
           </button>
         </form>
       )}
+         <div className="register-info">
+        <p>Kreiraj svoju to-do listu na jednostavan način, imaj uvid u zadatke koji su već odrađeni, ažuriraj već postojeće zadatke ili ih obriši.</p>
+      </div>
     </div>
   );
 }
