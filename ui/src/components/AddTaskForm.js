@@ -8,10 +8,12 @@ const AddTaskForm = ({fetchTasks}) => {
   const [newTask, setNewTask] = useState("");
 
   const addNewTask = async () => {
+    const userId = localStorage.getItem('userId')?.trim();
     try {
       await axios.post(`${API_URL}/task`, {
         name: newTask,
         completed: false,
+        userId: userId
       });
 
       await fetchTasks();
