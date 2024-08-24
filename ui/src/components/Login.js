@@ -64,6 +64,11 @@ function Login() {
   };
 
   return (
+   <div className="login-page">
+      {/* Tekst iznad forme */}
+      <div className="login-info">
+        <p>Pristupi svom nalogu i upravljaj svojim zadacima brzo i jednostavno.</p>
+      </div>
     <div className="login-container">
       <h2>Uloguj se</h2>
       <form onSubmit={handleSubmit} noValidate>
@@ -100,6 +105,7 @@ function Login() {
         </button>
       </form>
     </div>
+         </div>
   );
 }
 
