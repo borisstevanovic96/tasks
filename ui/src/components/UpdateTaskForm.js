@@ -33,7 +33,7 @@ export const UpdateTaskForm = ({
         <div className='dialog'>
             <TextField
              size='small'
-              label="Task"
+              label="Zadatak"
                variant='outlined'
                 onChange={(e)=> setTaskName(e.target.value)} />
             <Button
