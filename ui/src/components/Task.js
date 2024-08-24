@@ -42,7 +42,7 @@ const Task = ({ task, fetchTasks }) => {
         })}>
       <Checkbox checked={isComplete} onChange={handleUpdateTaskCompletion}/>
       <Typography variant='h4'>
-        {ime}
+        {name}
       </Typography>
         </div>
         <div className='taskButtons'>
