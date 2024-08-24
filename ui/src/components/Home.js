@@ -55,7 +55,7 @@ export default function Home() {
             zIndex: 1000, // Ensures the button is on top
           }}
         >
-          Logout
+          Izloguj se
         </Button>
         <AddTaskForm fetchTasks={fetchTasks} />
         {tasks.map((task) => (
