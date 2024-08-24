@@ -1,28 +1,36 @@
 /* Register.css */
 
+.register-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background to contrast the form */
+}
+
+.register-info {
+  margin-bottom: 2rem; /* Space below the info text */
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: #4a90e2; /* Soothing blue color */
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #4a90e2;
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.3); /* Blue shadow */
+  max-width: 600px; /* Restrict the width */
+  line-height: 1.5;
+}
+
 .register-container {
   background-color: #111; /* Black background */
   color: #fff; /* White text */
   padding: 3rem; /* Increased spacing around the form */
   max-width: 500px; /* Made the form wider */
-  margin: 3rem auto; /* Center the form */
+  margin: 0 auto; /* Center the form */
   border-radius: 10px; /* Rounded corners */
   border: 1px solid #444; /* Subtle border */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Slightly larger shadow */
-}
-
-.register-info {
-  margin-top: 20px;
-  font-size: 1rem; /* Increased font size for readability */
-  color: #ffdd57; /* Soft yellow color for a more elegant look */
-  text-align: center;
-  font-style: italic; /* Italicized for a refined feel */
-  line-height: 1.6; /* Increased line-height for better spacing */
-  background: linear-gradient(90deg, rgba(255,221,87,0.2) 0%, rgba(255,221,87,0.1) 100%);
-  padding: 1.5rem; /* Added padding around the text */
-  border-radius: 8px; /* Rounded corners to match the form */
-  border: 1px solid #ffdd57; /* Border matching the text color */
-  box-shadow: 0 0 10px rgba(255, 221, 87, 0.3); /* Soft glow effect */
 }
 
 h2 {
