@@ -29,7 +29,7 @@ export const UpdateTaskForm = ({
     };
   return (
     <Dialog open={isDialogOpen}>
-        <DialogTitle>Edit Task</DialogTitle>
+        <DialogTitle>Azuriraj zadatak</DialogTitle>
         <div className='dialog'>
             <TextField
              size='small'
