@@ -79,6 +79,11 @@ function Register() {
   };
 
   return (
+    <div className="register-page">
+      {/* Tekst iznad forme */}
+      <div className="register-info">
+        <p>Kreiraj svoju to-do listu na jednostavan način, imaj uvid u zadatke koji su već odrađeni, ažuriraj već postojeće zadatke ili ih obriši.</p>
+      </div>
     <div className="register-container">
       <h2>Registruj se</h2>
       {submitted ? (
@@ -134,9 +139,7 @@ function Register() {
           </button>
         </form>
       )}
-         <div className="register-info">
-        <p>Kreiraj svoju to-do listu na jednostavan način, imaj uvid u zadatke koji su već odrađeni, ažuriraj već postojeće zadatke ili ih obriši.</p>
-      </div>
+</div>
     </div>
   );
 }
