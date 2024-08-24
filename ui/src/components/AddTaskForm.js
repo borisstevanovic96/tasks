@@ -26,7 +26,7 @@ const AddTaskForm = ({fetchTasks}) => {
   return (
     <div>
       <Typography align='center' variant='h2' paddingTop={2} paddingBottom={2}>
-        My task list
+        Lista zadataka
       </Typography>
       <div className='addTaskForm'>
       <TextField 
