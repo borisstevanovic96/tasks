@@ -1,11 +1,33 @@
 /* Login.css */
 
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background to contrast the form */
+}
+
+.login-info {
+  margin-bottom: 2rem; /* Space below the info text */
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: #4a90e2; /* Soothing blue color */
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #4a90e2;
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.3); /* Blue shadow */
+  max-width: 600px; /* Restrict the width */
+  line-height: 1.5;
+}
+
 .login-container {
   background-color: #111; /* Black background */
   color: #fff; /* White text */
   padding: 3rem; /* Equal padding on all sides */
   max-width: 500px; /* Consistent width with the register form */
-  margin: 3rem auto; /* Center the form */
+  margin: 0 auto; /* Center the form */
   border-radius: 10px; /* Rounded corners */
   border: 1px solid #444; /* Subtle border */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
@@ -69,7 +91,6 @@ input:focus {
   transition: background-color 0.3s ease;
   text-align: center; /* Center the text inside the button */
 }
-
 
 .submit-button:disabled {
   background-color: #555; /* Gray background when disabled */
