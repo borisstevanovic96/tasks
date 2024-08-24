@@ -31,7 +31,7 @@ const AddTaskForm = ({fetchTasks}) => {
       <div className='addTaskForm'>
       <TextField 
        size="small"
-       label="Task"
+       label="Zadatak"
        variant="outlined"
        value={newTask}
        onChange={(e) => setNewTask(e.target.value)} />
