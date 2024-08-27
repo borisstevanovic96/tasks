@@ -37,7 +37,7 @@ export default function Home() {
     // Perform any logout actions here, like clearing user data or tokens
 
     // Redirect to the register page
-    navigate('/register');
+    navigate('/login');
   };
   return (
     <ThemeProvider theme={darkTheme}>
